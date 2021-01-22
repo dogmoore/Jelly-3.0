@@ -12,8 +12,6 @@ with open("config.yml", "r") as ymlfile:
     TOKEN = bot['token']
     PREFIX = bot['prefix']
 
-# TOKEN = os.getenv('ODAyMDE0MjcyNDE0NDE2OTA3.YApD_w.CuTo6dxfyrJa8ivmmWQA-nStQhE')
-
 intents = discord.Intents.default()
 client = Bot(command_prefix=PREFIX, help_command=None, activity=activity, intents=intents)
 client = discord.Client()
@@ -28,4 +26,4 @@ for x in os.listdr('commands'):
 async def on_ready():
     print(f'{client.user} has connected to Discord!')
 
-client.run('ODAyMDE0MjcyNDE0NDE2OTA3.YApD_w.CuTo6dxfyrJa8ivmmWQA-nStQhE')
+client.run(TOKEN)
