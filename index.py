@@ -21,7 +21,6 @@ for x in os.listdr('commands'):
         client.load_extension(f'commands.{x[:-3]}')
         print(f'\033[92m{i[:-3]}] loaded.\033[0m]')
 
-
 @client.event
 async def on_ready():
     print(f'{client.user} has connected to Discord!')
