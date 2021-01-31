@@ -45,6 +45,8 @@ class Events(commands.Cog):
                     await message.send('idk, no one?')
                 elif oneInTen == 10:
                     await message.send('The one and only Queen, Freddie Mercury!')
+                else:
+                    await print(f'random failed')
         except:
             pass
 
