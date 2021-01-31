@@ -341,4 +341,4 @@ healthchecksdb
 
 token.env
 
-confog.yml
+config.yml
