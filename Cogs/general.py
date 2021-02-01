@@ -1,6 +1,5 @@
 import yaml
 import discord
-from time import sleep
 from discord.ext import commands
 
 with open("config.yml", "r") as ymlfile:

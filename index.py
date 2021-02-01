@@ -28,7 +28,7 @@ if __name__ == '__main__':
         if i.endswith('.py') and i not in dontLoad:
             try:
                 client.load_extension(f'Cogs.{i[:-3]}')
-                print(f'{i[:-3]} loaded.\033[0m]')
+                print(f'{i[:-3]} loaded.')
 
             except Exception as error:
                 print(f'{i[:-3]} cannot be loaded. [{error}]')
