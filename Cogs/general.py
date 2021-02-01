@@ -1,29 +1,20 @@
 import yaml
 import discord
-import random
+from time import sleep
 from discord.ext import commands
-# from abc import ABCMeta
-# from abc_delegation import delegation_metaclass
 
 with open("config.yml", "r") as ymlfile:
     config = yaml.load(ymlfile, Loader=yaml.FullLoader)
 
-# class message:
-#     discord.abc.Snowflake
-
-# with open("bot.yml", "r") as ymlfile:
-#     bot = yaml.load(ymlfile, Loader=yaml.FullLoader)
 
 class Utils(commands.Cog):
-    def __init__(self,client):
+    def __init__(self, client):
         self.client = client
 
     @commands.command(name='ping')
     async def ping(self, context):
         client = self.client
         await context.send('test')
-
-
 
     @commands.command(name='shutdown')
     async def shutdown(self, context):
@@ -35,5 +26,12 @@ class Utils(commands.Cog):
         else:
             await context.send('Something went wrong')
 
+    @commands.command(name='say')
+    async def say(self, context, *, args):
+        if context.author.id == 376857933067321366 or context.author.id == 278548721778688010:
+            await context.message.delete()
+            await context.send(args)
+
+
 def setup(client):
-   client.add_cog(Utils(client))
+    client.add_cog(Utils(client))

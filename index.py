@@ -16,6 +16,7 @@ intents.members = True
 activity = discord.Activity(name='with Jelly\'s head', type=discord.ActivityType.playing)
 client = Bot(command_prefix=PREFIX, help_command=None, activity=activity, intents=intents)
 
+
 @client.event
 async def on_ready():
     print(f'{client.user} has connected to Discord!')
