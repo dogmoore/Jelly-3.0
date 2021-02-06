@@ -15,7 +15,7 @@ class Events(commands.Cog):
     async def on_message(self, message):
         client = self.client
 #        try:
-        oneInHundred = random.randint(1, 100)
+        oneInMeme = random.randint(1, 420)
         oneInTen = random.randint(1, 10)
 
         i = ''
@@ -26,7 +26,13 @@ class Events(commands.Cog):
         msg2 = {'how are you doing jelly', 'how are you doing jelly3.0', 'how are you doing jelly3',
                 'how are you doing jelly 3.0'}
 
-        if message.author.id == 278548721778688010 and oneInHundred == 7:
+        if client.user.mentioned_in(message):
+            emote = '<a:pinged:807363547793326080>'
+            emote2 = '<:sanic:807366430306861086>'
+            #await message.add_reaction(str(emote))
+            await message.channel.send(str(emote2))
+
+        elif message.author.id == 278548721778688010 and oneInMeme == 7:
             print('\'jelly is a heathen\' triggered')
             await message.reply('DON\'T LISTEN TO THIS HEATHEN, I AM THE REAL JELLY!')
         elif message.content.lower() in msg:
