@@ -10,6 +10,7 @@ with open("config.yml", "r") as ymlfile:
     bot = yaml.load(ymlfile, Loader=yaml.FullLoader)
     TOKEN = bot["token"]
     PREFIX = bot["prefix"]
+    VERSION = bot["version"]
 
 intents = discord.Intents.default()
 intents.members = True
@@ -19,7 +20,7 @@ client = Bot(command_prefix=PREFIX, help_command=None, activity=activity, intent
 
 @client.event
 async def on_ready():
-    print(f'{client.user} has connected to Discord!')
+    print(f'{client.user} v{VERSION} has connected to Discord!')
 
 dontLoad = []
 
