@@ -39,7 +39,7 @@ class Events(commands.Cog):
             print('\'jelly is a heathen\' triggered')
             async with message.channel.typing():
                 await asyncio.sleep(1)
-            await message.reply('DON\'T LISTEN TO THIS HEATHEN, I AM THE REAL JELLY!')
+            await message.reply('DON\'T LISTEN TO THIS HEATHEN, I AM THE REAL JELLY!', tts=True)
         elif message.content.lower() in msg:
             if oneInTen == 1:
                 async with message.channel.typing():
